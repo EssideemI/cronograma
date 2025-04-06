@@ -80,3 +80,98 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Editor de Texto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background: #1e1e1e;
+      color: #f0f0f0;
+    }
+
+    #editor {
+      width: 100%;
+      height: 90vh;
+      padding: 20px;
+      box-sizing: border-box;
+      border: none;
+      outline: none;
+      resize: none;
+      background: transparent;
+      color: inherit;
+      font-size: 16px;
+    }
+
+    #saveBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
+
+    #toggleMode {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #555;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 998;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="toggleMode">Modo Noturno</button>
+  <textarea id="editor" placeholder="Digite seu texto aqui..."></textarea>
+  <button id="saveBtn">Salvar</button>
+
+  <script>
+    const editor = document.getElementById('editor');
+    const saveBtn = document.getElementById('saveBtn');
+    const toggleMode = document.getElementById('toggleMode');
+    const body = document.body;
+
+    // Salvar conteúdo em arquivo
+    saveBtn.addEventListener('click', () => {
+      const text = editor.value;
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'meu_texto.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    // Alternar modo noturno
+    toggleMode.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      toggleMode.textContent = body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Noturno';
+    });
+  </script>
+
+</body>
+</html>
