@@ -84,7 +84,9 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Editor de Texto</title>
+  <title>Editor de IA - Treinamento</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -98,6 +100,15 @@
     .dark-mode {
       background: #1e1e1e;
       color: #f0f0f0;
+    }
+
+    .dark-mode select,
+    .dark-mode textarea,
+    .dark-mode summary,
+    .dark-mode details {
+      background-color: #333;
+      color: #f0f0f0;
+      border-color: #555;
     }
 
     #editor {
@@ -171,6 +182,20 @@
       body.classList.toggle('dark-mode');
       toggleMode.textContent = body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Noturno';
     });
+
+    // Registrar Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('Service Worker registrado:', reg.scope))
+          .catch(err => console.error('Erro ao registrar Service Worker:', err));
+      });
+    }
+  </script>
+
+</body>
+</html>
+
   </script>
 
 </body>
