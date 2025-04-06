@@ -165,7 +165,25 @@
     const toggleMode = document.getElementById('toggleMode');
     const body = document.body;
 
-    // Salvar conteúdo em arquivo
+    // Carregar conteúdo salvo
+    window.addEventListener('load', () => {
+      const savedText = localStorage.getItem('editorContent');
+      if (savedText) {
+        editor.value = savedText;
+      }
+      const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+      if (darkModeEnabled) {
+        body.classList.add('dark-mode');
+        toggleMode.textContent = 'Modo Claro';
+      }
+    });
+
+    // Salvar conteúdo localmente
+    editor.addEventListener('input', () => {
+      localStorage.setItem('editorContent', editor.value);
+    });
+
+    // Salvar em arquivo
     saveBtn.addEventListener('click', () => {
       const text = editor.value;
       const blob = new Blob([text], { type: 'text/plain' });
@@ -180,7 +198,9 @@
     // Alternar modo noturno
     toggleMode.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
-      toggleMode.textContent = body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Noturno';
+      const isDarkMode = body.classList.contains('dark-mode');
+      toggleMode.textContent = isDarkMode ? 'Modo Claro' : 'Modo Noturno';
+      localStorage.setItem('darkMode', isDarkMode);
     });
 
     // Registrar Service Worker
@@ -196,7 +216,3 @@
 </body>
 </html>
 
-  </script>
-
-</body>
-</html>
