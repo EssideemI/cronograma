@@ -24,12 +24,5 @@
     cursor: pointer;
   }
 
-  /* Ajustes gerais para modo escuro */
-  input[type="checkbox"] {
-    accent-color: white;
-  }
-
-  textarea::placeholder {
-    color: #aaa;
-  }
+  
 </style>
