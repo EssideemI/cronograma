@@ -6,6 +6,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icon-192.png" />
   <title>Cronograma de IA com Python</title>
+  
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -49,7 +50,7 @@
 ;
       resize: vertical;
     }
-    saveBtn {
+    button {
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -104,7 +105,8 @@
   <div class="dia"><h2>Dia 27 - IA para gerar imagens com diffusers</h2><div class="check-link"><input type="checkbox" id="dia27"><label for="dia27"><a href="https://github.com/huggingface/diffusers" target="_blank">Stable Diffusion - Hugging Face</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
   <div class="dia"><h2>Dia 28 - Projeto final: Texto + Imagem com IA</h2><div class="check-link"><input type="checkbox" id="dia28"><label for="dia28">Combine tudo!</label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
 
-    <button class="floating-btn" onclick="salvarProgresso()">💾</button>
+ 
+  <button class="floating-btn" onclick="salvarProgresso()">💾</button>
 
   <script>
     // Carrega progresso salvo
@@ -127,6 +129,7 @@
       alert("Progresso salvo com sucesso! (LocalStorage)");
     }
   </script>
+    
    <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
