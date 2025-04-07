@@ -132,13 +132,6 @@
       URL.revokeObjectURL(url);
     });
 
-    // Alternar modo noturno
-    toggleMode.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      const isDarkMode = body.classList.contains('dark-mode');
-      toggleMode.textContent = isDarkMode ? 'Modo Claro' : 'Modo Noturno';
-      localStorage.setItem('darkMode', isDarkMode);
-    });
 
     // Registrar Service Worker
     if ('serviceWorker' in navigator) {
