@@ -1,134 +1,136 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-
- <link rel="manifest" href="manifest.json">
-
- <style>
-  body {
-    background-color: #111;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-
-  .box, textarea {
-    background-color: #222;
-    color: white;
-    border: 1px solid #444;
-  }
-
-  .floating-btn {
-    background-color: #444;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 1rem;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    cursor: pointer;
-  }
-
- 
-  }
-</style>
-
-</head>
-<body>
-  <h1>Cronograma de Aprendizado - Python para IA</h1>
-
-  <!-- Semana 1 -->
-  <div class="dia"><h2>Dia 1 - O que é Python + Instalação</h2><div class="check-link"><input type="checkbox" id="dia1"><label for="dia1"><a href="https://youtu.be/S9uPNppGsGo" target="_blank">Curso em Vídeo - Aula 1</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 2 - Variáveis, Tipos de dados, Operadores</h2><div class="check-link"><input type="checkbox" id="dia2"><label for="dia2"><a href="https://youtu.be/S9uPNppGsGo?t=782" target="_blank">Curso em Vídeo - Aula 2</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 3 - Condições (if, elif, else)</h2><div class="check-link"><input type="checkbox" id="dia3"><label for="dia3"><a href="https://youtu.be/S9uPNppGsGo?t=2356" target="_blank">Curso em Vídeo - Aula 3</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 4 - Laços de repetição (for, while)</h2><div class="check-link"><input type="checkbox" id="dia4"><label for="dia4"><a href="https://youtu.be/S9uPNppGsGo?t=3391" target="_blank">Curso em Vídeo - Aula 4</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 5 - Funções e parâmetros</h2><div class="check-link"><input type="checkbox" id="dia5"><label for="dia5"><a href="https://youtu.be/S9uPNppGsGo?t=4300" target="_blank">Curso em Vídeo - Aula 5</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 6 - Listas, dicionários e tuplas</h2><div class="check-link"><input type="checkbox" id="dia6"><label for="dia6"><a href="https://youtu.be/S9uPNppGsGo?t=4970" target="_blank">Curso em Vídeo - Aula 6</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 7 - Projeto: Calculadora de IMC</h2><div class="check-link"><input type="checkbox" id="dia7"><label for="dia7">Desafio: escreva seu primeiro script</label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-
-  <!-- Semana 2 -->
-  <div class="dia"><h2>Dia 8 - Introdução ao Pandas</h2><div class="check-link"><input type="checkbox" id="dia8"><label for="dia8"><a href="https://youtu.be/0rnZFmeI_kw" target="_blank">Curso Pandas - Hashtag</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 9 - Lendo arquivos Excel e CSV</h2><div class="check-link"><input type="checkbox" id="dia9"><label for="dia9">Min 5–10 no vídeo anterior</label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 10 - Filtrar, ordenar, agrupar dados</h2><div class="check-link"><input type="checkbox" id="dia10"><label for="dia10">Min 10–20 no vídeo anterior</label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 11 - Numpy básico: vetores e arrays</h2><div class="check-link"><input type="checkbox" id="dia11"><label for="dia11"><a href="https://youtu.be/oLhohwfwf_U" target="_blank">Curso Numpy - Curso em Python</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 12 - Visualização com matplotlib</h2><div class="check-link"><input type="checkbox" id="dia12"><label for="dia12"><a href="https://youtu.be/xWVaTdfj9sM" target="_blank">Gráficos - Hashtag</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 13 - Visualização com seaborn</h2><div class="check-link"><input type="checkbox" id="dia13"><label for="dia13"><a href="https://youtu.be/mI7eYXMJ4C4" target="_blank">Seaborn - Hashtag</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 14 - Projeto: gráfico com dados reais</h2><div class="check-link"><input type="checkbox" id="dia14"><label for="dia14">Use seus próprios dados</label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-
-  <!-- Semana 3 -->
-  <div class="dia"><h2>Dia 15 - Introdução ao Machine Learning</h2><div class="check-link"><input type="checkbox" id="dia15"><label for="dia15"><a href="https://youtu.be/5DNL3UuSvkI" target="_blank">Aula ML Básico</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 16 - Regressão Linear</h2><div class="check-link"><input type="checkbox" id="dia16"><label for="dia16"><a href="https://youtu.be/7eh4d6sabA0" target="_blank">Tutorial sklearn - DIO</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 17 - Classificação: KNN e Decision Tree</h2><div class="check-link"><input type="checkbox" id="dia17"><label for="dia17">Min 19:00 no vídeo anterior</label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 18 - Treino/Teste + métricas</h2><div class="check-link"><input type="checkbox" id="dia18"><label for="dia18">Min 28:40 no vídeo anterior</label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 19 - Projeto: Previsão de preços ou diabetes</h2><div class="check-link"><input type="checkbox" id="dia19"><label for="dia19"><a href="https://www.kaggle.com/competitions" target="_blank">Exemplo no Kaggle</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 20 - Ajuste de parâmetros</h2><div class="check-link"><input type="checkbox" id="dia20"><label for="dia20">Min 39:50 no vídeo anterior</label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 21 - Projeto completo com sklearn</h2><div class="check-link"><input type="checkbox" id="dia21"><label for="dia21">Revisar tudo até aqui</label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-
-  <!-- Semana 4 -->
-  <div class="dia"><h2>Dia 22 - O que são LLMs e modelos generativos</h2><div class="check-link"><input type="checkbox" id="dia22"><label for="dia22"><a href="https://youtu.be/xvqsFTUsOmc" target="_blank">GPT e Hugging Face Explicado</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 23 - Usando a biblioteca transformers</h2><div class="check-link"><input type="checkbox" id="dia23"><label for="dia23"><a href="https://huggingface.co/transformers/" target="_blank">Docs + Tutorial</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 24 - Gerando texto com GPT-2</h2><div class="check-link"><input type="checkbox" id="dia24"><label for="dia24"><a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/text_generation.ipynb" target="_blank">Colab Tutorial</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 25 - Usando a API do ChatGPT</h2><div class="check-link"><input type="checkbox" id="dia25"><label for="dia25"><a href="https://platform.openai.com/docs" target="_blank">Docs OpenAI</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 26 - Projeto: Chatbot com OpenAI</h2><div class="check-link"><input type="checkbox" id="dia26"><label for="dia26"><a href="https://github.com/openai/openai-quickstart-python" target="_blank">Exemplo de código</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 27 - IA para gerar imagens com diffusers</h2><div class="check-link"><input type="checkbox" id="dia27"><label for="dia27"><a href="https://github.com/huggingface/diffusers" target="_blank">Stable Diffusion - Hugging Face</a></label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-  <div class="dia"><h2>Dia 28 - Projeto final: Texto + Imagem com IA</h2><div class="check-link"><input type="checkbox" id="dia28"><label for="dia28">Combine tudo!</label></div><textarea placeholder="Resumo ou anotações..."></textarea></div>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Editor de IA - Treinamento</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111111" />
   <link rel="manifest" href="manifest.json">
-  
+  <link rel="icon" href="icon-192.png" />
+  <title>IA Cronograma</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    h2 {
+      color: white;
+    }
+
+    .dia {
+      margin-bottom: 2rem;
+    }
+
+    .box {
+      background-color: #222;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 0.5rem 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+      margin-top: 0.5rem;
+      background-color: #222;
+      color: white;
+      border: 1px solid #444;
+      border-radius: 5px;
+      padding: 0.5rem;
+    }
+
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 1rem;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.2);
+      margin-right: 0.5rem;
+      accent-color: white;
+    }
+
+    a {
+      color: #84c1ff;
+      text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
-  <textarea id="editor" placeholder="Digite seu texto aqui..."></textarea>
-  <button id="saveBtn">Salvar</button>
+  <h1>Cronograma de Estudos IA</h1>
+
+  <div class="dia">
+    <h2>Dia 1 – Introdução à IA</h2>
+    <div class="box">
+      <label><input type="checkbox" /> <a href="https://www.youtube.com/watch?v=6LYgRe4vuyo" target="_blank">O que é Inteligência Artificial?</a></label>
+    </div>
+    <div class="box">
+      <label><input type="checkbox" /> <a href="https://www.youtube.com/watch?v=21EiKJKC6fM" target="_blank">IA na prática (aplicações reais)</a></label>
+    </div>
+    <textarea placeholder="Resumo ou anotações..."></textarea>
+  </div>
+
+  <div class="dia">
+    <h2>Dia 2 – Machine Learning</h2>
+    <div class="box">
+      <label><input type="checkbox" /> <a href="https://www.youtube.com/watch?v=HZ00QCTJcu8" target="_blank">Conceitos de Machine Learning</a></label>
+    </div>
+    <div class="box">
+      <label><input type="checkbox" /> <a href="https://www.youtube.com/watch?v=Gv9_4yMHFhI" target="_blank">Aprendizado supervisionado vs não supervisionado</a></label>
+    </div>
+    <textarea placeholder="Resumo ou anotações..."></textarea>
+  </div>
+
+  <div class="dia">
+    <h2>Dia 3 – Python para IA</h2>
+    <div class="box">
+      <label><input type="checkbox" /> <a href="https://www.youtube.com/watch?v=S9uPNppGsGo" target="_blank">Introdução ao Python</a></label>
+    </div>
+    <div class="box">
+      <label><input type="checkbox" /> <a href="https://www.youtube.com/watch?v=lD9KAnkZUjU" target="_blank">Python na prática com IA</a></label>
+    </div>
+    <textarea placeholder="Resumo ou anotações..."></textarea>
+  </div>
+
+  <button class="floating-btn" onclick="salvarProgresso()">💾</button>
 
   <script>
-    const editor = document.getElementById('editor');
-    const saveBtn = document.getElementById('saveBtn');
-    const body = document.body;
-
-    // Carregar conteúdo salvo
-    window.addEventListener('load', () => {
-      const savedText = localStorage.getItem('editorContent');
-      if (savedText) {
-        editor.value = savedText;
-      }
-      
-    // Salvar conteúdo localmente
-    editor.addEventListener('input', () => {
-      localStorage.setItem('editorContent', editor.value);
-    });
-
-    // Salvar em arquivo
-    saveBtn.addEventListener('click', () => {
-      const text = editor.value;
-      const blob = new Blob([text], { type: 'text/plain' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'meu_texto.txt';
-      a.click();
-      URL.revokeObjectURL(url);
-    });
-
-
-    // Registrar Service Worker
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js')
-          .then(reg => console.log('Service Worker registrado:', reg.scope))
-          .catch(err => console.error('Erro ao registrar Service Worker:', err));
+    // Carrega progresso salvo
+    window.onload = () => {
+      document.querySelectorAll('input[type="checkbox"]').forEach((checkbox, i) => {
+        checkbox.checked = localStorage.getItem(`check${i}`) === 'true';
+        checkbox.addEventListener('change', () => {
+          localStorage.setItem(`check${i}`, checkbox.checked);
+        });
+      });
+      document.querySelectorAll('textarea').forEach((area, i) => {
+        area.value = localStorage.getItem(`note${i}`) || '';
+        area.addEventListener('input', () => {
+          localStorage.setItem(`note${i}`, area.value);
+        });
       });
     }
+
+    function salvarProgresso() {
+      alert("Progresso salvo com sucesso! (LocalStorage)");
+    }
   </script>
-
 </body>
-</html>
 
+</html>
