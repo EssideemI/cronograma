@@ -1,10 +1,10 @@
 {
-  "name": "Editor de IA - Treinamento",
-  "short_name": "IA Editor",
-  "start_url": ".",
+  "name": "Gerador de Frases",
+  "short_name": "Frases",
+  "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#007BFF",
+  "background_color": "#111111",
+  "theme_color": "#111111",
   "icons": [
     {
       "src": "icon-192.png",
