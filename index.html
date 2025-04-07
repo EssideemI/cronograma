@@ -60,7 +60,6 @@
   <script>
     const editor = document.getElementById('editor');
     const saveBtn = document.getElementById('saveBtn');
-    const toggleMode = document.getElementById('toggleMode');
     const body = document.body;
 
     // Carregar conteúdo salvo
@@ -69,13 +68,7 @@
       if (savedText) {
         editor.value = savedText;
       }
-      const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
-      if (darkModeEnabled) {
-        body.classList.add('dark-mode');
-        toggleMode.textContent = 'Modo Claro';
-      }
-    });
-
+      
     // Salvar conteúdo localmente
     editor.addEventListener('input', () => {
       localStorage.setItem('editorContent', editor.value);
