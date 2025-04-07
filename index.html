@@ -61,20 +61,6 @@
       transition: background 0.3s, color 0.3s;
     }
 
-    .dark-mode {
-      background: #1e1e1e;
-      color: #f0f0f0;
-    }
-
-    .dark-mode select,
-    .dark-mode textarea,
-    .dark-mode summary,
-    .dark-mode details {
-      background-color: #333;
-      color: #f0f0f0;
-      border-color: #555;
-    }
-
     #editor {
       width: 100%;
       height: 90vh;
@@ -103,23 +89,10 @@
       z-index: 999;
     }
 
-    #toggleMode {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #555;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      z-index: 998;
-    }
+    
   </style>
 </head>
 <body>
-
-  <button id="toggleMode">Modo Noturno</button>
   <textarea id="editor" placeholder="Digite seu texto aqui..."></textarea>
   <button id="saveBtn">Salvar</button>
 
